@@ -26,7 +26,7 @@ Tux, de pinguïn, is de mascotte van Linux.
 
 <!-- _paginate: false -->
 
-![bg contain](../img/waarom-linux.png)
+![bg contain](../assets/waarom-linux.png)
 
 <!-- Waarom Linux? Overzicht van de voordelen, van ontwikkeltools tot community en terminal. -->
 
