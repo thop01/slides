@@ -9,9 +9,7 @@ size: 16:9
 
 # Linux les 1
 
-Naslagwerk Ubuntu
-
-Pascal Thong
+Ubuntu
 
 ---
 
@@ -29,6 +27,40 @@ Tux, de pinguïn, is de mascotte van Linux.
 ![bg contain](../assets/waarom-linux.png)
 
 <!-- Waarom Linux? Overzicht van de voordelen, van ontwikkeltools tot community en terminal. -->
+
+---
+
+## Wat gaan we de komende periode doen?
+
+<style scoped>
+table { width: 100%; table-layout: fixed; font-size: 20px; line-height: 1.3; border-collapse: collapse; }
+th, td { padding: 9px 12px; text-align: left; vertical-align: top; border-bottom: 1px solid #dedede; }
+th { color: #77216f; }
+th:first-child, td:first-child { width: 5%; }
+th:nth-child(2), td:nth-child(2) { width: 35%; }
+</style>
+
+| Les | Kern                                              | Inhoud                                                                                             |
+| --- | ------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| 1   | VMware voorbereiden en Ubuntu installeren         | Voorbereiding, ISO, virtuele hardware, installatie en zelfstandig starten.                         |
+| 2   | Wegwijs, basisinstellingen en systeemidentiteit   | Oriëntatie, veilige CLI, hostnaam, gebruiker, home en basisconfiguratie.                           |
+| 3   | Bestanden, directories, paden en basiscommando's  | GUI-bestandsbeheer, absolute/relatieve paden en veilige terminalroute.                             |
+| 4   | Gebruikers, groepen en minimale rechten           | Users, groups, root, sudo, home-directories en authenticatie/autorisatie.                          |
+| 5   | Software, standaardapps en systematisch opleveren | App Center, repositories, apt, installatie/verwijdering, bestandskoppeling, herstel en overdracht. |
+| 6   | Integrale praktijktoets                           | Zelfstandig inrichten, controleren, herstellen en opleveren.                                       |
+
+---
+
+## Lesmateriaal
+
+<style scoped>
+p { display: flex; align-items: center; justify-content: center; gap: 24px; }
+p img { width: calc((100% - 48px) / 3); height: 460px; object-fit: contain; }
+</style>
+
+![Hoofdstukken van het boek](<../assets/hoofdstukken boek.png>)
+![Linuxboek](../assets/linuxboek.png)
+![Studentenwerkboekjes](<../assets/studenten werkboekjes.png>)
 
 ---
 
