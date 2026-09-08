@@ -73,7 +73,7 @@ Linux is een opensourcebesturingsysteem.
 - Aanpassingen moet beschikbaar zijn voor anderen.
 - Verkopen mag niet.
 
-**_Deze voorwaarden staan beschreven onder de licentie GPL: General Public licanse_**
+**_Deze voorwaarden staan beschreven onder de licentie GPL: General Public license_**
 
 ---
 
