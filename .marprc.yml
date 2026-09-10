@@ -1,3 +1,4 @@
 themeSet:
   - ./theme/pascal.css
   - ./theme/ubuntu.css
+  - ./theme/innovatie.css

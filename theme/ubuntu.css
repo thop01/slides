@@ -1,5 +1,4 @@
 /* @theme ubuntu */
-@import "default";
 
 :root {
   --ubuntu-orange: #e95420;
@@ -202,4 +201,47 @@ section.recap {
 
 img {
   max-width: 100%;
+}
+
+/* Opt-in layouts: use <!-- _class: table --> or <!-- _class: gallery -->. */
+section.table table {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+section.table th,
+section.table td {
+  padding: 12px 16px;
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+  border: 1px solid var(--line);
+}
+
+section.table th {
+  background: var(--ubuntu-aubergine);
+  color: #fff;
+}
+
+section.table tr:nth-child(even) {
+  background: var(--soft);
+}
+
+section.gallery > p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+section.gallery > p > img {
+  flex: 1 1 0;
+  min-width: 0;
+  width: 0;
+  height: 460px;
+  object-fit: contain;
 }
