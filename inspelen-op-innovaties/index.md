@@ -171,6 +171,22 @@ OP TE LEVEREN PRODUCTEN
 
 ---
 
+OPDRACHT VAN VANDAAG
+
+## Pitch jouw innovatie in 90 seconden
+
+Kies een **originele innovatie die jou persoonlijk interesseert**: een nieuw of vernieuwd product, een dienst of een werkwijze.
+
+Vertel in je pitch:
+
+1. **Wie ben je?** Noem je naam.
+2. **Wat is de innovatie?** Leg uit wat deze doet en wat er nieuw aan is.
+3. **Waarom kies jij hiervoor?** Vertel wat jouw aandacht trok en waarom jij dit interessant vindt.
+
+**Bereid je voor:** schrijf per onderdeel enkele steekwoorden op en oefen met een timer. Houd je pitch binnen **120 seconden**.
+
+---
+
 <!-- _class: roadmap
 
 TERUGBLIK · DE ZEVEN CRITERIA
