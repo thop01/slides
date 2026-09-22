@@ -72,10 +72,10 @@ is afgerond en of de virtuele machine vanaf de virtuele schijf start. -->
 
 ---
 
-## Meest voorkomende fout(en)
+## Meest voorkomende fouten
 
-- VM is geinstalleerds in een onedrive (Het moet in direct in de C: schrijf niet in mydocuments)
-- Studenten hebben op update geklikt en niet op skip
+- De VM is geïnstalleerd in OneDrive. De VM moet rechtstreeks op de C: schijf staan, niet in Mijn documenten.
+- Studenten hebben op ‘Update’ geklikt in plaats van op ‘Skip’.
 
 ![w:700px](../assets/step-install.png)
 
@@ -135,11 +135,27 @@ systeemklok automatisch wordt gesynchroniseerd.
 
 ---
 
+# Basis commando's
+
+| Commando | Volledige naam                     | Beschrijving                                                                              |
+| -------- | ---------------------------------- | ----------------------------------------------------------------------------------------- |
+| `ls`     | List                               | Toont de bestanden en mappen in de huidige directory.                                     |
+| `ls -1`  | List, one per line                 | Toont bestanden en mappen elk op een nieuwe regel.                                        |
+| `ls -l`  | List, long format                  | Toont bestanden en mappen met uitgebreide informatie, zoals rechten, eigenaar en grootte. |
+| `cd`     | Change Directory                   | Gaat naar een andere directory. Zonder extra informatie ga je naar je home-directory.     |
+| `cd ..`  | Change Directory, parent directory | Gaat naar de bovenliggende directory.                                                     |
+| `mkdir`  | Make Directory                     | Maakt een nieuwe directory.                                                               |
+| `touch`  | Touch                              | Maakt een leeg bestand aan of werkt de wijzigingsdatum van een bestaand bestand bij.      |
+
+---
+
 # Opdracht 1
 
 Maak de volgende mappenstructuur via de terminal
 
 ![w:700px Mappenstructuur](../assets/mappenstructuur.png)
+
+> https://webterm.app/nl/free-play
 
 ---
 
