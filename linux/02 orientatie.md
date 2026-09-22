@@ -16,7 +16,7 @@ Afbeeldingspaden zijn relatief aan dit Markdown-bestand. -->
 
 # Linux: Orientatie
 
-Les 02 - Wegwijs, basisinstellingen en systeemidentiteit
+Les 02 - Wegwijs, basisinstellingen en systeemidentiteit.
 
 ---
 
@@ -44,35 +44,24 @@ th:nth-child(2), td:nth-child(2) { width: 35%; }
 # Programma van vandaag
 
 - Ubuntu goed geinstalleerd?
+- Instellingen bekijken & veranderen
 - Orienteren in GUI & CLI
-- Secure werken volgens een systeem configuratie kaart
+
+> Met ctrl + alt + T kan je de terminal openen.
 
 ---
-
-## Wat ga je leren?
-
-- Met ctrl + alt T kan je de terminal openen.
-- sudo hostnamectl set-hostname nieuwe-hostnaam
-- ai-prompts.png
-
-- ik wil de scroll neutraal. Naar beneden scrollen is ook echt naar beneden.
-- ik wil dat de scrollbar altijd zichtbaar is.
-- Ik wil mijn cursor extra groot
-- ik wil een achtergrond met een inspirerende quote.
-
----
-
-<!-- _class: section -->
 
 # 3 type studenten
 
-- 3 type studenten
+- Studenten die Ubuntu correct hebben geïnstalleerd.
+- Studenten die Ubuntu nog niet hebben geïnstalleerd.
+- Studenten die nog niets hebben geïnstalleerd.
 
 ---
 
 <!-- _class: gallery -->
 
-## Installatiecontrole
+## Links is goed, rechts is nog niet klaar
 
 ![Goed: Ubuntu toont het aanmeldscherm met je eigen account](../assets/good-install.png) ![Niet goed: Ubuntu toont opnieuw het installatieprogramma](../assets/bad-install.png)
 
@@ -83,111 +72,88 @@ is afgerond en of de virtuele machine vanaf de virtuele schijf start. -->
 
 ---
 
-### Stappen
+## Meest voorkomende fout(en)
 
-1. Start Ubuntu en controleer of het bureaublad volledig laadt.
-2. Open de terminal met Ctrl + Alt + T.
-3. Controleer of er geen foutmeldingen verschijnen tijdens het opstarten.
-4. Test een herstart en controleer of alles weer normaal opstart.
-5. Controleer tijd, netwerk en pakketupdates om de installatie te beoordelen.
+- VM is geinstalleerds in een onedrive (Het moet in direct in de C: schrijf niet in mydocuments)
+- Studenten hebben op update geklikt en niet op skip
 
----
-
-## Voorbeeldtheorie: wat is Ubuntu?
-
-**Linux** is de kernel: de kern die de hardware en systeemprocessen beheert.
-
-Een **distributie** combineert deze kernel met programma's en hulpmiddelen tot een bruikbaar besturingssysteem. Ubuntu is daar een voorbeeld van.
-
-> Onthoud: de kernel vormt de basis; de distributie levert het complete pakket.
+![w:700px](../assets/step-install.png)
 
 ---
 
-<!-- _class: table -->
-
-## Overzicht
-
-| Begrip         | Betekenis                              | Voorbeeld       |
-| -------------- | -------------------------------------- | --------------- |
-| Distributie    | Linux met programma's en hulpmiddelen  | Ubuntu          |
-| Directory      | Een map met bestanden of andere mappen | `/home`         |
-| Home-directory | Persoonlijke map van een gebruiker     | `/home/student` |
-| Terminal       | Venster waarin je commando's invoert   | `pwd` uitvoeren |
+![bg cover](../assets/ubuntu-desktop.png)
 
 ---
 
-<!-- _class: demo -->
-
-## Stappenplan: verken je home-directory
-
-1. Open de terminal.
-2. Typ `cd ~` en druk op Enter.
-3. Toon je huidige locatie met `pwd`.
-4. Bekijk de inhoud met `ls`.
-5. Vergelijk de uitvoer met de bestandsbeheerder.
+![bg cover](../assets/ubuntu-desktop-uitleg.png)
 
 ---
 
-<!-- _class: terminal -->
+## Systeemidentiteit en basisinstellingen
 
-## Voorbeeldcommando's
+Gebruik deze commando's alleen om informatie te bekijken; ze wijzigen niets.
+
+| Commando      | Volledige naam        | Beschrijving                                                                |
+| ------------- | --------------------- | --------------------------------------------------------------------------- |
+| `hostnamectl` | Hostname Control      | Toont de huidige hostnaam en informatie over het systeem.                   |
+| `timedatectl` | Time and Date Control | Toont de huidige tijd, tijdzone en synchronisatiestatus van de systeemklok. |
+| `localectl`   | Locale Control        | Toont de ingestelde locale, taal- en toetsenbordinformatie.                 |
 
 ```bash
-# Ga naar je persoonlijke map
-cd ~
-
-# Toon de huidige locatie en de inhoud
-pwd
-ls
+hostnamectl
+timedatectl
+localectl status
 ```
 
-Welke directories herken je in de uitvoer?
+## Hostname, tijd en locale veranderen
+
+Voor deze wijzigingen zijn beheerdersrechten nodig. Gebruik `sudo` alleen voor
+commando's die je begrijpt; Ubuntu vraagt om je eigen wachtwoord.
 
 ---
 
-## Theorie met een afbeelding
+## Hostname veranderen
 
-![bg right:35% contain](../assets/ubuntu.webp)
+De hostname is de naam van de computer. Stel bijvoorbeeld `ubuntu-les` in:
 
-Ubuntu is een Linuxdistributie waarmee we tijdens deze lessen oefenen.
-
-- Een grafische omgeving voor dagelijks gebruik.
-- Een terminal voor commando's.
-- Een pakketbeheerder voor software.
+```bash
+sudo hostnamectl set-hostname ubuntu-les
+```
 
 ---
 
-<!-- _class: gallery -->
+## Tijdzone instellen
 
-## Lesmateriaal: meerdere afbeeldingen
+Bekijk de huidige instellingen en stel voor Nederland de tijdzone in:
 
-<!-- Plaats de afbeeldingen op één regel, zonder lege regels ertussen. -->
+```bash
+sudo timedatectl set-timezone Europe/Amsterdam
+```
 
-![Linuxboek](../assets/linuxboek.png) ![Hoofdstukken van het boek](<../assets/hoofdstukken boek.png>) ![Studentenwerkboekjes](<../assets/studenten werkboekjes.png>)
-
----
-
-<!-- _paginate: false -->
-
-<!-- Voor een afbeelding over de hele dia: bg contain behoudt de hele afbeelding. -->
-
-![bg contain](../assets/waarom-linux.png)
+Controleer in de uitvoer of de juiste tijdzone staat ingesteld en of de
+systeemklok automatisch wordt gesynchroniseerd.
 
 ---
 
-<!-- _class: work -->
+# Opdracht 1
 
-## Zelf aan de slag
+Maak de volgende mappenstructuur via de terminal
 
-**Opdracht:** verken je persoonlijke map.
+![w:700px Mappenstructuur](../assets/mappenstructuur.png)
 
-1. Open je home-directory in de bestandsbeheerder.
-2. Open dezelfde directory in de terminal.
-3. Noteer drie directories die je op beide plekken ziet.
+---
 
-**Opleveren:** een screenshot van de terminal met een korte toelichting.
+# Opdracht 2
 
-**Tijd:** 10 minuten.
+Schrijf via de GUI in de map Notes/Linux notities over de onderdelen die tijdens de les worden behandeld.
+
+Noteer per onderwerp kort:
+
+wat het onderwerp inhoudt;
+welke commando’s erbij horen;
+een voorbeeld van hoe je het gebruikt.
+
+Sla je notities op in een Markdown-bestand in de map Notes/Linux.
 
 ---
 
@@ -195,8 +161,8 @@ Ubuntu is een Linuxdistributie waarmee we tijdens deze lessen oefenen.
 
 ## Terugblik
 
-- Wat is het verschil tussen Linux en Ubuntu?
+<!-- - Wat is het verschil tussen Linux en Ubuntu?
 - Waarvoor gebruik je een home-directory?
 - Wat laten `pwd` en `ls` zien?
 
-**Volgende les:** [onderwerp en voorbereiding].
+**Volgende les:** [onderwerp en voorbereiding]. -->

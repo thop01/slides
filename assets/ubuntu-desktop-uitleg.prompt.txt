@@ -1,0 +1,13 @@
+Use case: compositing / scientific-educational.
+Input image: edit target, the supplied authentic Ubuntu desktop screenshot. Create one polished Dutch educational annotated image based on THIS screenshot, landscape, high resolution. Preserve the original desktop screenshot faithfully including windows, icons, all terminal text and file names. Add ample light outer margins for readable annotation cards; screenshot stays large and fully visible. Use clear numbered colored markers and thin precise leader arrows. No arrows obscuring terminal text. Title: "Wegwijs op je Ubuntu-desktop".
+Label these eight items with these exact facts and targets:
+1 "Browser (Firefox)" — point to Firefox window lower left, browser toolbar. "Hier bekijk je websites."
+2 "Bestand" — point to white document icon named "fl" in file manager lower right. "fl is een bestand."
+3 "Bestandsbeheer" — point to Home file manager window lower right. "Hier bekijk en beheer je bestanden en mappen."
+4 "CLI / Terminal" — point to purple terminal window upper right. "Hier voer je tekstcommando’s uit."
+Provide an enlarged faithful terminal prompt inset in its own clear panel beneath the screenshot, using a crisp monospace font. Exact single-line prompt: "pascal-thong@pascal-thong-VMware-Virtual-Platform:~$ ls -l". It may wrap only if essential but prefer one line. Visually distinguish its four meaningful parts using colors and four explanatory labels:
+5 "Ingelogde gebruiker: pascal-thong" — connect to pascal-thong BEFORE @.
+6 "Hostname: pascal-thong-VMware-Virtual-Platform" — connect to text AFTER @ and BEFORE colon. Explanation "De computernaam staat na @ in de terminalprompt."
+7 "Huidige directory: ~" — connect precisely to tilde after colon. Explanation "~ staat voor je persoonlijke map (home)."
+8 "Uitgevoerd commando: ls -l" — connect to ls -l after $. Explanation "Toont bestanden en mappen met details."
+Connect inset to original terminal first prompt unobtrusively. All instructional text must be Dutch, spelled correctly, large enough to read on classroom slides. Use clean sans serif annotation text, white or off-white callout panels, restrained Ubuntu orange and purple accents, accessible contrast. Do not fabricate a different desktop or change actual user, hostname, command or file name. Do not point file annotation to a folder. Avoid unnecessary decoration. Output a single completed raster educational image.
