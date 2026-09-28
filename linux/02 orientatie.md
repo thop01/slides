@@ -6,11 +6,6 @@ paginate: true
 size: 16:9
 ---
 
-<!-- Kopieer dit bestand voor een nieuwe les en vervang de voorbeeldinhoud.
-Elke --- begint een nieuwe dia. _class geldt alleen voor de huidige dia.
-Opmaak staat in ../theme/ubuntu.css; inline CSS is niet nodig.
-Afbeeldingspaden zijn relatief aan dit Markdown-bestand. -->
-
 <!-- _class: title -->
 <!-- _paginate: false -->
 

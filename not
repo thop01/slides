@@ -1,0 +1,26 @@
+---
+
+<!-- _class: work -->
+
+## Opdracht 1: maak je oefenomgeving
+
+Open een terminal met **Ctrl + Alt + T**. Werk als je eigen gebruiker.
+
+```bash
+cd
+mkdir les3
+cd les3
+mkdir documenten backup
+touch documenten/plan.txt documenten/taken.txt
+pwd
+ls documenten
+```
+
+**Controle:** je staat in `~/les3` en ziet twee bestanden in `documenten`.
+
+<!-- Tijd: 4 minuten. Gebruik deze oefenomgeving voor alle volgende stappen.
+Bestaat les3 al van een eerdere poging? Kies les3-oefening als nieuwe mapnaam
+en vervang ~/les3 in de vervolgopdrachten door ~/les3-oefening.
+Laat studenten de oefenmap ook in de grafische bestandsbeheerder bekijken. -->
+
+---
