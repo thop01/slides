@@ -32,10 +32,6 @@ Navigeren, kopiëren & bewerken ~~zoeken en werken met beheerdersrechten.~~
 
 > Start je geïnstalleerde Ubuntu-VM en log in met je eigen account.
 
-<!-- Richttijd: 75 minuten. De korte oefeningen vallen binnen de blokken.
-Controleer vooraf hoe de functietoetsen in de gebruikte VMware-versie
-naar de VM worden gestuurd en op welke TTY de grafische sessie draait. -->
-
 ---
 
 ## Wat ga je leren?
@@ -48,8 +44,6 @@ Na deze les kun je:
 - Tekstverwerken in de CLI
 - Een programma installeren
 - Je eigen website ontwikkelen
-  ~~- sudo commando~~
-  ~~- een eigen alias maken, gebruiken en verwijderen.~~
 
 ---
 
@@ -69,10 +63,6 @@ les 2: Ubuntu-instellingen bekijken en basiscommando's oefenen.
 | `mkdir naam`      | Een map maken.                                   |
 | `touch naam.txt`  | Een leeg bestand maken als het nog niet bestaat. |
 
-<!--
-    In de vorige twee lessen hebben we VMware en Ubuntu Desktop geïnstalleerd, de instellingen van Ubuntu bekeken en basiscommando's geoefend.
--->
-
 ---
 
 ## Van GUI naar CLI, en weer terug
@@ -89,9 +79,6 @@ les 2: Ubuntu-instellingen bekijken en basiscommando's oefenen.
 
 ![tty](../assets/tty.png)
 
-<!-- De shell, meestal Bash, interpreteert de commando's. De tekstconsole
-en het terminalvenster bieden elk toegang tot een shell. -->
-
 ---
 
 <!-- _class: demo -->
@@ -107,8 +94,6 @@ en het terminalvenster bieden elk toegang tot een shell. -->
 7. Typ `exit` om uit te loggen uit de tekstconsole.
 8. Ga terug naar de GUI met **Ctrl + Alt + F2**.
 9. Controleer of je directory en bestandje is aangemaakt.
-
-<!-- Lees de opdracht en voer het uit. -->
 
 ---
 
@@ -141,9 +126,6 @@ Bijvoorbeeld: `/home/thong-thong`. Bij jou staat je eigen gebruikersnaam.
 | `..`         | De bovenliggende map.       | `cd ..`                          |
 
 Linux maakt onderscheid tussen hoofdletters en kleine letters.
-
-<!-- /home/thong is een voorbeeld, geen pad dat iedereen moet overtypen.
-Bespreek: Documenten en documenten kunnen verschillende mappen zijn. -->
 
 ---
 
@@ -358,255 +340,3 @@ Noem iets op wat je vandaag hebt geleerd.
 Hoe gevarieerder, hoe beter! :)
 
 ---
-
-> **Disclaimer:** De volgende sheets zijn gegenereerd door AI en er heeft hier (nog) geen docent naar gekeken. Gebruik deze informatie op eigen risico.
-
----
-
-## Bestanden zoeken met find
-
-`find` doorzoekt een startmap en de mappen daaronder.
-
-```bash
-find . -name 'plan.txt'
-find ~/les3 -type f -name '*.txt'
-```
-
-- `.`: begin in de huidige map.
-- `-name`: zoek op naam; `*` staat voor nul of meer tekens.
-- `-type f`: zoek alleen gewone bestanden.
-- Quotes zorgen dat `find` zelf het zoekpatroon verwerkt.
-
-<!-- Voer het eerste voorbeeld uit vanuit ~/les3. -name is hoofdlettergevoelig.
-Bron: https://www.gnu.org/software/findutils/manual/html_node/find_html/Name.html -->
-
----
-
-<!-- _class: work -->
-
-## Opdracht 3: vind je bestanden terug
-
-1. Ga met `cd` naar je home-directory.
-2. Zoek vanuit `~/les3` alle bestanden met de naam `verslag.txt`.
-3. Zoek daar alle gewone bestanden waarvan de naam eindigt op `.txt`.
-4. Zoek alleen directories met `find ~/les3 -type d`.
-
-**Tijd:** 5 minuten. **Noteer:** de gevonden paden van `verslag.txt`.
-
-Geen resultaat? Controleer je startmap, spelling en hoofdletters.
-Een langlopende zoekopdracht stop je met **Ctrl + C**.
-
-<!-- Antwoorden:
-find ~/les3 -type f -name 'verslag.txt'
-find ~/les3 -type f -name '*.txt'
-Verwacht verslag.txt in documenten, backup en archief.
-Zoek gericht in de oefenmap; find / kan veel uitvoer en toegangsweigeringen geven. -->
-
----
-
-## Beheerdersrechten: root en sudo
-
-**root** is de superuser: het beheerdersaccount van Linux.
-Sommige systeemhandelingen vereisen deze rechten.
-
-- Zet `sudo` vóór een commando om het standaard als root uit te voeren.
-- Je account moet daarvoor toestemming hebben.
-- Ubuntu vraagt meestal om **je eigen wachtwoord**; je ziet geen tekens.
-- Voor bestanden in je eigen oefenmap heb je geen `sudo` nodig.
-
-`/` is de hoofdmap; **root** is een account. Dat zijn verschillende begrippen.
-
----
-
-<!-- _class: demo -->
-
-## Demonstratie: één commando met sudo
-
-`whoami` toont onder welke gebruiker een commando draait.
-
-```bash
-whoami
-sudo whoami
-whoami
-```
-
-Je ziet achtereenvolgens **je eigen naam**, **root**, **je eigen naam**.
-
-Na `sudo whoami` werk je dus verder als je gewone gebruiker.
-Een recente wachtwoordcontrole kan tijdelijk onthouden worden.
-
-<!-- Laat studenten voorspellen wat de derde opdracht toont.
-sudo whoami wijzigt geen systeeminstellingen. Als een account geen sudo mag
-gebruiken, laat de student meekijken bij de demonstratie.
-Bron: https://manpages.ubuntu.com/manpages/noble/man8/sudo.8.html -->
-
----
-
-<!-- _class: demo -->
-
-## Een rootshell met sudo -i
-
-`sudo -i` opent een login-shell als root. Alle volgende opdrachten
-draaien daarin met beheerdersrechten. Meestal gebruik je `sudo` per commando.
-
-```bash
-sudo -i
-whoami
-pwd
-exit
-whoami
-```
-
-Je ziet als root meestal `/root`. Met `exit` keer je terug naar je eigen shell.
-Controleer dat de laatste `whoami` weer je eigen gebruikersnaam toont.
-
-<!-- Laat studenten letten op de prompt: meestal $ voor de gewone gebruiker
-en # voor root, maar prompts zijn aanpasbaar. whoami is de expliciete controle.
-Dit is geen directe aanmelding met een rootwachtwoord.
-exit verlaat de huidige shell: in de rootshell ga je terug naar je gebruiker;
-in een TTY-login-shell log je uit die tekstconsole. -->
-
----
-
-## Een eigen commando maken met alias
-
-Met `alias` geef je in Bash een eigen korte naam aan een commando.
-
-```bash
-alias overzicht='ls -l'
-overzicht
-alias overzicht
-unalias overzicht
-```
-
-Geen spaties rond `=`. Zet het commando tussen enkele quotes.
-
-De alias geldt in deze shell. Na sluiten verdwijnt hij; blijvend instellen
-via bijvoorbeeld `~/.bashrc` valt buiten deze oefening.
-
----
-
-## Een alias kan ook de computer afsluiten
-
-Bekijk dit voorbeeld zonder het uit te voeren tijdens het oefenen:
-
-```bash
-alias fck='shutdown -h now'
-```
-
-De definitie maakt alleen de alias. Als je daarna `fck` typt,
-wordt `shutdown -h now` uitgevoerd: direct afsluiten.
-
-Een alias geeft geen extra rechten; afsluiten kan autorisatie vereisen.
-Kies voor dagelijks gebruik een naam die duidelijk zegt wat er gebeurt.
-
-<!-- Opnemen als leesvoorbeeld, niet als onderdeel van de oefenreeks.
-Bron: https://www.freedesktop.org/software/systemd/man/latest/shutdown.html -->
-
----
-
-<!-- _class: work -->
-
-## Opdracht 4: je eigen afkorting
-
-1. Controleer met `whoami` dat je als je eigen gebruiker werkt.
-2. Maak de alias `naarles` voor `cd ~/les3`.
-3. Ga met `cd /` naar de hoofdmap.
-4. Voer `naarles` uit en controleer je locatie met `pwd`.
-5. Bekijk de definitie met `alias naarles`.
-6. Verwijder de alias met `unalias naarles`.
-
-**Tijd:** 3 minuten. Leg aan je buur uit waarom quotes nodig zijn.
-
-<!-- Antwoord: alias naarles='cd ~/les3'
-De quotes houden de volledige vervangende tekst, inclusief spatie, bij elkaar.
-Na unalias is naarles niet meer als deze alias beschikbaar. -->
-
----
-
-<!-- _class: table -->
-
-## Als een commando niet werkt
-
-| Melding of situatie         | Wat controleer je?                                   |
-| --------------------------- | ---------------------------------------------------- |
-| `No such file or directory` | Je locatie met pwd; namen en paden met ls.           |
-| `Permission denied`         | Mag jouw account hier werken? Is dit het juiste pad? |
-| `omitting directory` bij cp | Voor een map met inhoud heb je -r nodig.             |
-| find geeft geen resultaat   | Startmap, hoofdletters en zoekpatroon.               |
-| Een alias werkt niet meer   | Zit je nog in dezelfde shell?                        |
-
-Lees de melding. Voeg `sudo` pas toe als beheerdersrechten echt nodig zijn.
-
----
-
-<!-- _class: work -->
-
-## Eindopdracht: zelfstandig aan de slag
-
-Maak vanuit `~/les3` een nieuwe map `eindopdracht`.
-
-1. Maak daarin `bron` en `kopie`, met `uitleg.txt` in `bron`.
-2. Kopieer het bestand naar `kopie` en de map `bron` naar `reserve`.
-3. Zoek binnen `eindopdracht` alle bestanden met de naam `uitleg.txt`.
-4. Maak en test de alias `zoekuitleg` voor die zoekopdracht. Leg de definitie en uitvoer vast.
-5. Verwijder de alias. Controleer met `whoami` je gebruikersnaam.
-
-**Tijd:** 10 minuten. Gebruik je notities en werk als je eigen gebruiker.
-
-<!-- Mogelijke uitwerking:
-cd ~/les3
-mkdir eindopdracht
-cd eindopdracht
-mkdir bron kopie
-touch bron/uitleg.txt
-cp bron/uitleg.txt kopie/
-cp -r bron reserve
-find . -type f -name 'uitleg.txt'
-alias zoekuitleg='find ~/les3/eindopdracht -type f -name uitleg.txt'
-zoekuitleg
-unalias zoekuitleg
-whoami
-Drie gevonden bestanden: bron/uitleg.txt, kopie/uitleg.txt, reserve/uitleg.txt.
-Een exacte naam zonder spaties of wildcards heeft hier geen extra quotes nodig. -->
-
----
-
-## Wat lever je op?
-
-Vul je Markdown-notities in **Notes/Linux** aan met:
-
-- een screenshot van `pwd` en de drie gevonden paden uit de eindopdracht;
-- de definitie van `zoekuitleg` en het resultaat van de alias;
-- in je eigen woorden het verschil tussen `cp -r` en `cp -d`;
-- wanneer je `sudo` nodig hebt en hoe je een rootshell verlaat.
-
-**Geslaagd:** de drie bestanden bestaan, de alias werkt en je kunt
-uitleggen welke commando's je hebt gebruikt.
-
-<!-- Laat studenten de aliasdefinitie tijdens stap 4 vastleggen, bijvoorbeeld
-met alias zoekuitleg, voordat ze de alias weer verwijderen. -->
-
----
-
-<!-- _class: recap -->
-
-## Terugblik
-
-- Wat is het verschil tussen `pwd` en `ls`?
-- Welke optie heb je nodig om een hele map te kopiëren?
-- Wat betekent de punt in `find . -name '*.txt'`?
-- Wat is het verschil tussen `sudo commando` en `sudo -i`?
-- Blijft een alias bestaan als je deze terminal sluit?
-
-**Volgende les:** gebruikers, groepen en rechten.
-Wie mag welke bestanden lezen, wijzigen en uitvoeren?
-
-<!-- Antwoorden: locatie versus inhoud; cp -r; zoeken vanaf de huidige map;
-één opdracht als root versus een blijvende rootshell; nee, niet zonder configuratie.
-Docentbronnen:
-https://www.gnu.org/software/coreutils/manual/html_node/cp-invocation.html
-https://www.gnu.org/software/findutils/manual/html_node/find_html/Name.html
-https://www.gnu.org/software/bash/manual/html_node/Aliases.html
-https://manpages.ubuntu.com/manpages/noble/man8/sudo.8.html
--->
