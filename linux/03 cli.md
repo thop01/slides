@@ -9,11 +9,9 @@ size: 16:9
 <!-- _class: title -->
 <!-- _paginate: false -->
 
-# Les 3: Werken met de CLI
+# 03 Linux
 
-Mappen en bestanden beheren in Ubuntu
-
-Navigeren, kopiëren & bewerken ~~zoeken en werken met beheerdersrechten.~~
+Les 03 - CLI: Bestanden, directories, paden en basiscommando's
 
 ---
 

@@ -7,9 +7,9 @@ size: 16:9
 
 <!-- _class: title -->
 
-# Linux les 1
+# 01 Linux
 
-Ubuntu
+Les 1 - Introductie: VMware voorbereiden en Ubuntu installeren
 
 ---
 

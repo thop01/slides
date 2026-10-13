@@ -10,9 +10,9 @@ size: 16:9
 <!-- _class: title -->
 <!-- _paginate: false -->
 
-# Les 5: Softwarebeheer
+# 05 Linux
 
-Installeren, instellen, herstellen en opleveren.
+Les 05 Softwarebeheer: App Center, repositories, apt, installatie/verwijdering, bestandskoppeling, herstel
 
 Linux · Ubuntu · System Engineering
 

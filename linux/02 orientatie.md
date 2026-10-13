@@ -9,9 +9,9 @@ size: 16:9
 <!-- _class: title -->
 <!-- _paginate: false -->
 
-# Linux: Orientatie
+# 02 Linux
 
-Les 02 - Wegwijs, basisinstellingen en systeemidentiteit.
+Les 02 - Orientatie: Wegwijs, basisinstellingen en systeemidentiteit.
 
 ---
 
